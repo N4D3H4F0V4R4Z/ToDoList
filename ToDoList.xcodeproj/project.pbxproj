@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,9 @@
 		629E072C2557463F000F7ABC /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629E072B2557463F000F7ABC /* ListViewController.swift */; };
 		629E072F25574650000F7ABC /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629E072E25574650000F7ABC /* DateViewController.swift */; };
 		629E07322557465B000F7ABC /* Date.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 629E07312557465B000F7ABC /* Date.storyboard */; };
+		629E074325575005000F7ABC /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629E074225575005000F7ABC /* ListTableViewCell.swift */; };
+		629E0752255767DE000F7ABC /* PointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629E0751255767DE000F7ABC /* PointViewController.swift */; };
+		629E075625576A9A000F7ABC /* Point.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 629E075525576A9A000F7ABC /* Point.storyboard */; };
 		C9A842A14D7BF37733A18962 /* Pods_ToDoList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED166747752B2C082FFC571 /* Pods_ToDoList.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +31,9 @@
 		629E072B2557463F000F7ABC /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		629E072E25574650000F7ABC /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
 		629E07312557465B000F7ABC /* Date.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Date.storyboard; sourceTree = "<group>"; };
+		629E074225575005000F7ABC /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		629E0751255767DE000F7ABC /* PointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointViewController.swift; sourceTree = "<group>"; };
+		629E075525576A9A000F7ABC /* Point.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Point.storyboard; sourceTree = "<group>"; };
 		B0F69037F297D92BD23A17D1 /* Pods-ToDoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoList.debug.xcconfig"; path = "Target Support Files/Pods-ToDoList/Pods-ToDoList.debug.xcconfig"; sourceTree = "<group>"; };
 		FED166747752B2C082FFC571 /* Pods_ToDoList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDoList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -50,7 +56,6 @@
 				B0F69037F297D92BD23A17D1 /* Pods-ToDoList.debug.xcconfig */,
 				31633DFBD9B61BB4FF310FDD /* Pods-ToDoList.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -87,6 +92,7 @@
 		629E072525574613000F7ABC /* Groups */ = {
 			isa = PBXGroup;
 			children = (
+				629E074E255767AF000F7ABC /* Point */,
 				629E072725574624000F7ABC /* Date */,
 				629E07262557461C000F7ABC /* List */,
 			);
@@ -96,8 +102,9 @@
 		629E07262557461C000F7ABC /* List */ = {
 			isa = PBXGroup;
 			children = (
-				629E072B2557463F000F7ABC /* ListViewController.swift */,
-				629E072825574631000F7ABC /* List.storyboard */,
+				629E074125574FE9000F7ABC /* Cell */,
+				629E073C25574E5A000F7ABC /* Storyboard */,
+				629E073B25574E52000F7ABC /* ViewController */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -105,10 +112,75 @@
 		629E072725574624000F7ABC /* Date */ = {
 			isa = PBXGroup;
 			children = (
-				629E072E25574650000F7ABC /* DateViewController.swift */,
-				629E07312557465B000F7ABC /* Date.storyboard */,
+				629E074725575357000F7ABC /* Storyboard */,
+				629E074625575348000F7ABC /* ViewController */,
 			);
 			path = Date;
+			sourceTree = "<group>";
+		};
+		629E073B25574E52000F7ABC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				629E072B2557463F000F7ABC /* ListViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		629E073C25574E5A000F7ABC /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				629E072825574631000F7ABC /* List.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		629E074125574FE9000F7ABC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				629E074225575005000F7ABC /* ListTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		629E074625575348000F7ABC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				629E072E25574650000F7ABC /* DateViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		629E074725575357000F7ABC /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				629E07312557465B000F7ABC /* Date.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		629E074E255767AF000F7ABC /* Point */ = {
+			isa = PBXGroup;
+			children = (
+				629E075425576A89000F7ABC /* Storyboard */,
+				629E074F255767B8000F7ABC /* ViewController */,
+			);
+			path = Point;
+			sourceTree = "<group>";
+		};
+		629E074F255767B8000F7ABC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				629E0751255767DE000F7ABC /* PointViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		629E075425576A89000F7ABC /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				629E075525576A9A000F7ABC /* Point.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		A50DA76B4920C64E37B23134 /* Frameworks */ = {
@@ -180,6 +252,7 @@
 			files = (
 				629E07322557465B000F7ABC /* Date.storyboard in Resources */,
 				629E07102557422B000F7ABC /* LaunchScreen.storyboard in Resources */,
+				629E075625576A9A000F7ABC /* Point.storyboard in Resources */,
 				629E072925574631000F7ABC /* List.storyboard in Resources */,
 				629E070D2557422B000F7ABC /* Assets.xcassets in Resources */,
 			);
@@ -237,6 +310,8 @@
 				629E072C2557463F000F7ABC /* ListViewController.swift in Sources */,
 				629E072F25574650000F7ABC /* DateViewController.swift in Sources */,
 				629E070425574227000F7ABC /* AppDelegate.swift in Sources */,
+				629E0752255767DE000F7ABC /* PointViewController.swift in Sources */,
+				629E074325575005000F7ABC /* ListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
