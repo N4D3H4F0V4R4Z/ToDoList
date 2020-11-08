@@ -17,7 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xwR-Wa-2Ba">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Paper" translatesAutoresizingMaskIntoConstraints="NO" id="JLs-LW-VYn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fall in love..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xwR-Wa-2Ba">
                                 <rect key="frame" x="25" y="54" width="364" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -36,9 +39,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="jKI-CL-9ay" firstAttribute="top" secondItem="xwR-Wa-2Ba" secondAttribute="bottom" constant="8" symbolic="YES" id="3GD-dD-Ge3"/>
+                            <constraint firstItem="JLs-LW-VYn" firstAttribute="leading" secondItem="05i-vr-dV3" secondAttribute="leading" id="E4p-dd-3sg"/>
                             <constraint firstItem="xwR-Wa-2Ba" firstAttribute="top" secondItem="05i-vr-dV3" secondAttribute="top" constant="10" id="ECQ-iM-vFW"/>
                             <constraint firstItem="xwR-Wa-2Ba" firstAttribute="leading" secondItem="05i-vr-dV3" secondAttribute="leading" constant="25" id="FHz-3c-B6V"/>
                             <constraint firstItem="jKI-CL-9ay" firstAttribute="leading" secondItem="05i-vr-dV3" secondAttribute="leading" id="OGj-wO-vMI"/>
+                            <constraint firstItem="JLs-LW-VYn" firstAttribute="trailing" secondItem="05i-vr-dV3" secondAttribute="trailing" id="TTp-Fe-hgb"/>
+                            <constraint firstItem="JLs-LW-VYn" firstAttribute="top" secondItem="f6r-Bp-hsd" secondAttribute="top" id="Ylb-By-grV"/>
+                            <constraint firstAttribute="bottom" secondItem="JLs-LW-VYn" secondAttribute="bottom" id="eTq-a1-Laf"/>
                             <constraint firstItem="jKI-CL-9ay" firstAttribute="trailing" secondItem="05i-vr-dV3" secondAttribute="trailing" id="fin-lO-A88"/>
                             <constraint firstAttribute="bottom" secondItem="jKI-CL-9ay" secondAttribute="bottom" id="r9o-bK-SVF"/>
                             <constraint firstItem="05i-vr-dV3" firstAttribute="trailing" secondItem="xwR-Wa-2Ba" secondAttribute="trailing" constant="25" id="xBm-fI-9UO"/>
@@ -55,6 +62,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Paper" width="2500" height="2500"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

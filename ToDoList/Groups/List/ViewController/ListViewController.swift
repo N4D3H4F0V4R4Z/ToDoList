@@ -46,6 +46,9 @@ class ListViewController: UIViewController {
     func refresh() {
         data = realm.objects(ToDoList.self).map({ $0 })
         tableView.reloadData()
+        let tempImageView = UIImageView(image: UIImage(named: "Paper"))
+        tempImageView.frame = self.tableView.frame
+        self.tableView.backgroundView = tempImageView;
     }
     
 }
@@ -62,6 +65,7 @@ extension ListViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListTableViewCell", for: indexPath) as! ListTableViewCell
         cell.textLabel?.text = data[indexPath.row].item
+        cell.textLabel?.font = UIFont(name: "American Typewriter", size: 15)
         return cell
     }
     
@@ -79,7 +83,7 @@ extension ListViewController: UITableViewDelegate {
         pointVC.deletionHandler = { [weak self] in
             self?.refresh()
         }
-        pointVC.title = item.item
+//        pointVC.title = item.item
         navigationController?.pushViewController(pointVC, animated: true)
     }
     

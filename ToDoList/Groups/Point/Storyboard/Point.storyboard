@@ -17,13 +17,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRn-fr-gzv">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Paper" translatesAutoresizingMaskIntoConstraints="NO" id="hJN-HA-WHa">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRn-fr-gzv">
                                 <rect key="frame" x="25" y="54" width="364" height="82"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="82" id="HdQ-ns-vty"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <font key="NSFont" size="25" name="AmericanTypewriter"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yja-sS-TvF">
@@ -31,7 +39,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="82" id="p3I-tV-d71"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -41,7 +49,11 @@
                         <constraints>
                             <constraint firstItem="PRn-fr-gzv" firstAttribute="top" secondItem="evc-PC-fmq" secondAttribute="top" constant="10" id="0X3-JL-6N4"/>
                             <constraint firstItem="evc-PC-fmq" firstAttribute="trailing" secondItem="Yja-sS-TvF" secondAttribute="trailing" constant="25" id="BRk-iW-kN1"/>
+                            <constraint firstItem="hJN-HA-WHa" firstAttribute="trailing" secondItem="evc-PC-fmq" secondAttribute="trailing" id="CTf-WX-89P"/>
+                            <constraint firstItem="hJN-HA-WHa" firstAttribute="leading" secondItem="evc-PC-fmq" secondAttribute="leading" id="GBg-mF-1mp"/>
+                            <constraint firstAttribute="bottom" secondItem="hJN-HA-WHa" secondAttribute="bottom" id="PP6-Ha-QcJ"/>
                             <constraint firstItem="Yja-sS-TvF" firstAttribute="leading" secondItem="evc-PC-fmq" secondAttribute="leading" constant="25" id="WJn-kU-yl0"/>
+                            <constraint firstItem="hJN-HA-WHa" firstAttribute="top" secondItem="DYP-KZ-Zq3" secondAttribute="top" id="Xjy-hq-mBB"/>
                             <constraint firstItem="evc-PC-fmq" firstAttribute="trailing" secondItem="PRn-fr-gzv" secondAttribute="trailing" constant="25" id="c17-Lb-myn"/>
                             <constraint firstItem="Yja-sS-TvF" firstAttribute="top" secondItem="PRn-fr-gzv" secondAttribute="bottom" constant="8" symbolic="YES" id="g2a-qu-OJv"/>
                             <constraint firstItem="PRn-fr-gzv" firstAttribute="leading" secondItem="evc-PC-fmq" secondAttribute="leading" constant="25" id="yWN-Sv-RAc"/>
@@ -58,6 +70,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Paper" width="2500" height="2500"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

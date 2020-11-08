@@ -34,6 +34,7 @@ class PointViewController: UIViewController {
     }
     
     @objc private func didTapDelete() {
+        
         guard let myItem = self.item else {
             return
         }

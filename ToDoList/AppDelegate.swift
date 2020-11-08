@@ -14,6 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        UINavigationBar.appearance().tintColor = UIColor.black
+        
+        let navigationFont = UIFont(name: "American Typewriter", size: 20)
+        let navigationFontAttributes = [NSAttributedString.Key.font : navigationFont]
+        
+        UINavigationBar.appearance().titleTextAttributes = navigationFontAttributes as [NSAttributedString.Key : Any]
+        UIBarButtonItem.appearance().setTitleTextAttributes(navigationFontAttributes as [NSAttributedString.Key : Any], for: .normal)
+        
         print("Приложение загрузилось!")
         return true
     }

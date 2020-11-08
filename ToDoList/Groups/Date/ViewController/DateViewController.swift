@@ -26,6 +26,8 @@ class DateViewController: UIViewController, UITextFieldDelegate {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(didTapSaveButton))
         
+        UINavigationBar.appearance().tintColor = UIColor.black
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
